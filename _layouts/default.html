@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14251d">
+  <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="sparkle-layer" aria-hidden="true"></div>
+  <div class="garden-decor" aria-hidden="true">
+    <span class="garden-tree tree-left">🌳</span>
+    <span class="garden-tree tree-right">🌲</span>
+    <span class="garden-frog frog-left">🐸</span>
+    <span class="garden-frog frog-right">🐸</span>
+    <span class="firefly firefly-one"></span>
+    <span class="firefly firefly-two"></span>
+    <span class="firefly firefly-three"></span>
+    <span class="firefly firefly-four"></span>
+    <span class="firefly firefly-five"></span>
+    <span class="firefly firefly-six"></span>
+  </div>
+  {{ content }}
+  <script src="{{ '/script.js' | relative_url }}"></script>
+</body>
+</html>

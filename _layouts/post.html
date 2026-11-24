@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<header class="topbar">
+  <a class="brand" href="{{ '/' | relative_url }}">✿ ✿</a>
+  <nav>
+    <a href="{{ '/' | relative_url }}">home</a>
+    <a href="{{ '/' | relative_url }}#diary">diary</a>
+    <button class="tiny-button" id="themeToggle" type="button" title="Toggle theme" aria-label="Toggle theme">☾</button>
+  </nav>
+</header>
+<main>
+  <article class="about-card diary-post">
+    <p class="eyebrow">A LITTLE MEMORY</p>
+    <h2>{{ page.title | escape }}</h2>
+    <p class="signature">{{ page.date | date: "%B %-d, %Y" }}{% if page.mood %} · {{ page.mood | escape }}{% endif %}</p>
+    <div class="entry-text post-content">{{ content }}</div>
+    <p><a class="pixel-button" href="{{ '/' | relative_url }}#diary">← BACK TO THE DIARY</a></p>
+  </article>
+</main>
+<footer><div class="footer-stars">✦ · · · ♡ · · · ✦</div><span>© <span id="year"></span> Andy's Diary</span></footer>
