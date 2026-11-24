@@ -1,0 +1,8 @@
+title: "Andy's Diary"
+description: "a garden for my thoughts, memories, and words waiting to bloom."
+url: ""
+baseurl: "/andys-diary"
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+timezone: Europe/Paris
+plugins: []

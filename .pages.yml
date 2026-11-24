@@ -1,0 +1,50 @@
+media:
+  input: assets/images
+  output: /assets/images
+
+content:
+  - name: posts
+    label: Diary entries
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    filename:
+      template: "{year}-{month}-{day}-{title}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title, date, mood]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: mood
+        label: Current mood
+        type: select
+        options:
+          values:
+            - "☁ daydreamy"
+            - "♡ loved"
+            - "✦ hopeful"
+            - "☾ sleepy"
+            - "☂ a little blue"
+            - "✿ peaceful"
+            - "★ chaotic"
+      - name: body
+        label: Your thoughts
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          media: false
